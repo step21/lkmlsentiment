@@ -157,7 +157,7 @@ def sentiment_emails():
     #for filenum, filename in enumerate(filenames):
     for filenum, filename in enumerate(os.listdir(archive_dir)):
         if filenum % 10 == 0:
-            print datetime.now(), filenum
+            print(datetime.now(), filenum)
         if filename.endswith(".email.json"):
             full_filename = os.path.join(archive_dir, filename)
             fh = open(full_filename, "r")
